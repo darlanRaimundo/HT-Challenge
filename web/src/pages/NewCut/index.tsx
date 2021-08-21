@@ -74,9 +74,8 @@ const NewCut: React.FC<INewCutProps> = () => {
 
         fetch(`http://localhost:5000/api/cutVideo/`,{ 
                                                         method: 'POST',
-                                                        mode: 'no-cors', 
-                                                        body: srcFrame
-                                                    
+                                                        mode: 'no-cors',
+                                                        body: JSON.stringify({file: srcFrame})
                                                     })
             .then(response => {
                 console.log(response)
